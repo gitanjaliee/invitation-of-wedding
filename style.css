@@ -1,0 +1,500 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --wine: #5b1728;
+    --deep-wine: #35101b;
+    --gold: #c8a15a;
+    --cream: #f8f1e7;
+    --white: #fffaf5;
+    --text: #4b383d;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+.hero {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    color: var(--white);
+
+    background:
+        radial-gradient(circle at 15% 20%, rgba(200,161,90,.18), transparent 25%),
+        radial-gradient(circle at 85% 75%, rgba(200,161,90,.12), transparent 30%),
+        linear-gradient(135deg, #35101b, #6b2034, #3b111e);
+}
+
+.hero::before,
+.hero::after {
+    content: "";
+    position: absolute;
+    border: 1px solid rgba(200,161,90,.3);
+    border-radius: 50%;
+}
+
+.hero::before {
+    width: 520px;
+    height: 520px;
+    top: -220px;
+    left: -220px;
+}
+
+.hero::after {
+    width: 430px;
+    height: 430px;
+    right: -190px;
+    bottom: -190px;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 850px;
+    padding: 40px 20px;
+}
+
+.eyebrow,
+.section-label {
+    letter-spacing: 4px;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--gold);
+}
+
+.hero h1 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(70px, 12vw, 150px);
+    font-weight: 500;
+    line-height: .8;
+    margin: 35px 0;
+}
+
+.hero h1 span {
+    display: block;
+    font-size: .42em;
+    color: var(--gold);
+    margin: 18px 0;
+    font-style: italic;
+}
+
+.invite-text {
+    max-width: 520px;
+    margin: 0 auto 35px;
+    color: #eadbd4;
+    font-size: 15px;
+}
+
+.date {
+    display: inline-flex;
+    align-items: center;
+    gap: 18px;
+    border-top: 1px solid rgba(200,161,90,.6);
+    border-bottom: 1px solid rgba(200,161,90,.6);
+    padding: 15px 28px;
+    margin-bottom: 35px;
+}
+
+.date > span {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 55px;
+    color: var(--gold);
+    line-height: 1;
+}
+
+.date div {
+    text-align: left;
+}
+
+.date strong,
+.date small {
+    display: block;
+}
+
+.date strong {
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+
+.date small {
+    color: #dbc5b5;
+}
+
+.primary-btn,
+.outline-btn {
+    display: inline-block;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    padding: 15px 28px;
+    transition: .3s ease;
+}
+
+.primary-btn {
+    background: var(--gold);
+    color: #29151b;
+}
+
+.primary-btn:hover {
+    transform: translateY(-3px);
+    background: #dfbc76;
+}
+
+.outline-btn {
+    border: 1px solid var(--gold);
+    color: var(--gold);
+}
+
+.outline-btn:hover {
+    background: var(--gold);
+    color: var(--deep-wine);
+}
+
+.scroll-down {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #d9c4b5;
+    font-size: 9px;
+    letter-spacing: 3px;
+}
+
+.scroll-down div {
+    width: 1px;
+    height: 45px;
+    margin: 8px auto 0;
+    background: var(--gold);
+}
+
+.intro {
+    padding: 120px 20px;
+    text-align: center;
+    max-width: 850px;
+    margin: auto;
+}
+
+.intro h2,
+.countdown-section h2,
+.section-heading h2,
+.venue h2,
+.rsvp h2 {
+    font-family: "Cormorant Garamond", serif;
+    color: var(--wine);
+    font-size: clamp(42px, 6vw, 70px);
+    font-weight: 500;
+    line-height: 1;
+    margin: 20px 0;
+}
+
+em {
+    color: var(--gold);
+}
+
+.intro-text {
+    max-width: 620px;
+    margin: 30px auto 0;
+    color: #756368;
+}
+
+.couple {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    padding: 80px 20px 120px;
+    background: var(--white);
+}
+
+.couple-card {
+    text-align: center;
+    width: 250px;
+}
+
+.initial {
+    width: 100px;
+    height: 100px;
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    margin: auto;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 48px;
+    color: var(--gold);
+}
+
+.couple-card h3 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 32px;
+    color: var(--wine);
+    margin: 20px 0 8px;
+}
+
+.couple-card p {
+    font-size: 12px;
+    color: #806e73;
+}
+
+.ampersand {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 55px;
+    color: var(--gold);
+}
+
+.countdown-section {
+    text-align: center;
+    padding: 110px 20px;
+    background: #f1e6da;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+.count-box {
+    width: 120px;
+    padding: 25px 10px;
+    background: var(--white);
+    border: 1px solid rgba(91,23,40,.12);
+}
+
+.count-box strong {
+    display: block;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 48px;
+    color: var(--wine);
+    line-height: 1;
+}
+
+.count-box span {
+    display: block;
+    margin-top: 8px;
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: var(--gold);
+}
+
+.events {
+    padding: 120px 7%;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 65px;
+}
+
+.section-heading > p:last-child {
+    color: #79686d;
+}
+
+.event-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.event-card {
+    position: relative;
+    padding: 40px 25px;
+    min-height: 330px;
+    background: var(--white);
+    border: 1px solid #eadbd0;
+    text-align: center;
+    transition: .3s ease;
+    cursor: pointer;
+}
+
+.event-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 45px rgba(53,16,27,.10);
+}
+
+.event-card.selected {
+    transform: translateY(-8px);
+    border-color: var(--gold);
+}
+
+.featured-event {
+    background: var(--deep-wine);
+    color: #eee0d5;
+}
+
+.event-number {
+    position: absolute;
+    top: 15px;
+    right: 18px;
+    font-size: 10px;
+    color: var(--gold);
+}
+
+.event-icon {
+    font-size: 32px;
+    color: var(--gold);
+    margin: 20px 0;
+}
+
+.event-card h3 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 35px;
+    color: var(--wine);
+}
+
+.featured-event h3 {
+    color: var(--white);
+}
+
+.event-date {
+    color: var(--gold) !important;
+    font-size: 10px !important;
+    margin: 10px 0 20px;
+}
+
+.event-card p:last-child {
+    font-size: 12px;
+    color: #806e73;
+}
+
+.featured-event p:last-child {
+    color: #d6c3bd;
+}
+
+.venue {
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background:
+        linear-gradient(rgba(53,16,27,.9), rgba(53,16,27,.94)),
+        radial-gradient(circle, #9a5265, #35101b);
+    color: var(--white);
+}
+
+.venue-content {
+    padding: 60px 20px;
+}
+
+.venue h2 {
+    color: var(--white);
+}
+
+.venue h3 {
+    font-family: "Cormorant Garamond", serif;
+    color: var(--gold);
+    font-size: 30px;
+    margin-top: 30px;
+}
+
+.venue-content > p:not(.section-label) {
+    color: #dfccc4;
+    margin: 10px 0 30px;
+}
+
+.rsvp {
+    text-align: center;
+    padding: 120px 20px;
+    background: var(--white);
+}
+
+.rsvp > p:not(.section-label) {
+    color: #77666b;
+    margin-bottom: 30px;
+}
+
+footer {
+    text-align: center;
+    padding: 45px 20px;
+    background: #241019;
+    color: #cdbbb5;
+}
+
+.footer-names {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 32px;
+    color: var(--white);
+}
+
+.footer-names span {
+    color: var(--gold);
+}
+
+footer p {
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin-top: 10px;
+}
+
+@media (max-width: 900px) {
+    .event-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+
+    .hero h1 {
+        font-size: 80px;
+    }
+
+    .hero-content {
+        padding: 30px 18px;
+    }
+
+    .intro,
+    .events,
+    .rsvp {
+        padding: 85px 20px;
+    }
+
+    .couple {
+        flex-direction: column;
+        gap: 25px;
+        padding: 80px 20px;
+    }
+
+    .ampersand {
+        font-size: 40px;
+    }
+
+    .event-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .count-box {
+        width: 95px;
+    }
+
+    .count-box strong {
+        font-size: 38px;
+    }
+
+    .date > span {
+        font-size: 45px;
+    }
+}
